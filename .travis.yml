@@ -1,13 +1,13 @@
 dist: bionic
 language: csharp
 solution: Duplicati.sln
-dotnet: 4.6.2
+dotnet: 2.0.0
 install:
   - nuget restore Duplicati.sln
-  - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
   - sudo pip install selenium
   - sudo pip install --upgrade urllib3
-  - if [ ! -d "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.23.0 ]; then ln -s "${TRAVIS_BUILD_DIR}"/packages/sharpcompress.0.23.0 "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.18.2; fi
+  - if [ ! -d "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.23.0 ]; then ln -s "${TRAVIS_BUILD_DIR}"/packages/sharpcompress.0.23.0 "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.23.0; fi
 addons:
   coverity_scan:
     project:
