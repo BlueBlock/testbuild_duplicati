@@ -76,8 +76,7 @@ jobs:
           access_key: $SAUCE_ACCESS_KEY
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get upgrade -y
+  - sudo apt-get update # have the latest catalog, but don't ugprade everything
   - chmod +x ./build.sh # make the script executable if it already is not
   - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
