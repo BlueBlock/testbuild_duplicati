@@ -67,7 +67,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="netstandard" />
     <Reference Include="CoCoL, Version=1.5.0.19417, Culture=neutral, PublicKeyToken=0983de3c914beeaa, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\CoCoL.1.6.1\lib\net45\CoCoL.dll</HintPath>
     </Reference>
