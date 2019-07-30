@@ -6,11 +6,6 @@ mono:
   - latest
   - 4.6.1
 install:
-  - sudo apt-get update > /dev/null
-  - sudo apt-get build-dep smuxi > /dev/null
-  - sudo apt-get install devscripts equivs > /dev/null
-  - sudo mk-build-deps --install debian/control > /dev/null
-  - sudo apt-get install mono-devel nunit-console moreutils gtk-sharp2-gapi libgtkspell-dev > /dev/null
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
   - sudo pip install selenium
@@ -78,7 +73,6 @@ jobs:
 
 before_install:
       - chmod +x ./build.sh
-      - git submodule update --init --recursive
       - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 script:
