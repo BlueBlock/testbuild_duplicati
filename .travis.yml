@@ -1,13 +1,11 @@
-dist: bionic
+dist: trusty
 language: csharp
 solution: Duplicati.sln
 dotnet: 2.0.0
-#mono:
-#  - latest
-#  - 5.18.0
 install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
+  - sudo pip install --upgrade pip
   - sudo pip install selenium
   - sudo pip install --upgrade urllib3
   - if [ ! -d "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.23.0 ]; then ln -s "${TRAVIS_BUILD_DIR}"/packages/sharpcompress.0.23.0 "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.23.0; fi
@@ -73,7 +71,6 @@ jobs:
 
 before_install:
       - chmod +x ./build.sh
-      - pip install --upgrade pip
       - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 script:
