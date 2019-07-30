@@ -23,7 +23,6 @@ else
 fi
 
 echo "Build script starting with parameters TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR and CATEGORY=$CATEGORY"
-echo "TRAVIS_MSBUILD=$TRAVIS_MSBUILD"
 
 # build duplicati
 
