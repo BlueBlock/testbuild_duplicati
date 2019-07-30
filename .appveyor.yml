@@ -18,7 +18,6 @@ environment:
         - solution_name: Tools/SQLiteTool.sln
         - solution_name: thirdparty/TlsTest.sln
         - solution_name: Installer/Windows/UpdateVersion.sln
-        - solution_name: Installer/WixInstaller.sln
         - solution_name: Duplicati.sln
 #before_build:
     #- cmd: nuget restore Duplicati.sln
