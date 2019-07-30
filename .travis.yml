@@ -2,9 +2,9 @@ dist: bionic
 language: csharp
 solution: Duplicati.sln
 dotnet: 2.0.0
-mono:
-  - latest
-  - 4.6.1
+#mono:
+#  - latest
+#  - 5.18.0
 install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
