@@ -10,6 +10,15 @@ environment:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
     matrix:
         - solution_name: BuildTools/AutoUpdateBuilder.sln
+        - solution_name: BuildTools/DependencyFinder.sln
+        - solution_name: BuildTools/GnupgSigningTool.sln
+        - solution_name: "BuildTools/Duplicati CommandLine Only.sln"
+        - solution_name: BuildTools/UpdateVersionStamp.sln
+        - solution_name: thirdparty/mozroots.sln
+        - solution_name: Tools/SQLiteTool.sln
+        - solution_name: thirdparty/TlsTest.sln
+        - solution_name: Installer/Windows/UpdateVersion.sln
+        - solution_name: Installer/WixInstaller.sln
         - solution_name: Duplicati.sln
 #before_build:
     #- cmd: nuget restore Duplicati.sln
