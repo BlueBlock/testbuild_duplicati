@@ -1,8 +1,6 @@
 version: 1.0.{build}
 image:
-    #- Ubuntu1804
     - Visual Studio 2017
-    #- Visual Studio 2019
 configuration: Debug
 platform: Any CPU
 environment:
