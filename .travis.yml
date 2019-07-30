@@ -2,6 +2,9 @@ dist: bionic
 language: csharp
 solution: Duplicati.sln
 dotnet: 2.0.0
+mono:
+  - 5.18.0
+  - latest
 install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
@@ -72,4 +75,4 @@ before_install:
       - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 script:
-  - ./build.sh ${CATEGORY} ${TRAVIS_BUILD_DIR}
+  - sh ./build.sh ${CATEGORY} ${TRAVIS_BUILD_DIR}
