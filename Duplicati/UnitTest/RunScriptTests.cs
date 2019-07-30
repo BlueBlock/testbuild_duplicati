@@ -53,8 +53,9 @@ namespace Duplicati.UnitTest
             using (var c = new Library.Main.Controller("file://" + TARGETFOLDER, options, null))
             {
                 var res = c.Backup(new string[] { DATAFOLDER });
-                if (res.ParsedResult != ParsedResultType.Success)
+                if (res.ParsedResult != ParsedResultType.Success){
                     throw new Exception("Unexpected result from base backup");
+                }
                 
                 System.Threading.Thread.Sleep(PAUSE_TIME);
                 options["run-script-before"] = CreateScript(0);
