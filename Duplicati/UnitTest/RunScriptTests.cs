@@ -48,9 +48,8 @@ namespace Duplicati.UnitTest
             // We need a small delay as we run very small backups back-to-back
             var PAUSE_TIME = TimeSpan.FromSeconds(3);
 
-            Console.WriteLine($"DATAFOLDER: {DATAFOLDER}");
             BorderTests.WriteTestFilesToFolder(DATAFOLDER, blocksize, 0);
-            Console.WriteLine($"TARGETFOLDER: {TARGETFOLDER}");
+
             using (var c = new Library.Main.Controller("file://" + TARGETFOLDER, options, null))
             {
                 var res = c.Backup(new string[] { DATAFOLDER });

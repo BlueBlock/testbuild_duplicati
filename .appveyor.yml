@@ -9,9 +9,8 @@ environment:
 before_build:
     - ps: $env:UNITTEST_BASEFOLDER = "$Env:APPVEYOR_BUILD_FOLDER" + "\testdata"
     - ps: if ($env:APPVEYOR_REPO_NAME.Equals("duplicati/duplicati")) {
-        $env:GITTER_NOTIFY_URL = "https://webhooks.gitter.imSTOP/e/a2c55bac2b5c38838e0f"
+        $env:GITTER_NOTIFY_URL = "https://webhooks.gitter.im/e/a2c55bac2b5c38838e0f"
         }
-    - ps: Write-Host "GITTER_NOTIFY_URL $env:GITTER_NOTIFY_URL"
     - cmd: nuget restore Duplicati.sln
 build:
     project: Duplicati.sln

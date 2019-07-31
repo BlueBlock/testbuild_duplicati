@@ -79,13 +79,10 @@ namespace Duplicati.UnitTest
         [Category("SVNData")]
         public void TestWithErrors()
         {
-            Console.WriteLine($"SOURCE_FOLDERS: {SOURCE_FOLDERS}");
             var u = new Library.Utility.Uri(TestUtils.GetDefaultTarget());
             RandomErrorBackend.WrappedBackend = u.Scheme;
             var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
 
-            Console.WriteLine($"TestFolders: {TestFolders.Take(5).ToArray()}");
-            Console.WriteLine($"target: {target}");
             SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
         }
 
