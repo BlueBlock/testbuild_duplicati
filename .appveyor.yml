@@ -4,7 +4,7 @@ configuration: Debug
 platform: Any CPU
 environment:
     AUTOUPDATER_Duplicati_SKIP_UPDATE: 1
-    UNITTEST_BASEFOLDER: C:\projects\duplicati\testdata
+    UNITTEST_BASEFOLDER: C:\projects\testbuild_duplicati\testdata
     COVERALLS_REPO_TOKEN:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
 before_build:
@@ -16,10 +16,12 @@ test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
 
-        mkdir .\..\duplicati\testdata
-        $extractPath = Resolve-Path ".\..\duplicati\testdata"
-        write-host "path $extractPath"
-        Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
+        #mkdir .\..\duplicati\testdata
+        #$extractPath = Resolve-Path ".\..\duplicati\testdata"
+        #write-host "path $extractPath"
+        #Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
+
+        7z x DSMCBE.zip -otestdata
 
         Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
         Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
