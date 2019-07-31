@@ -12,6 +12,10 @@ before_build:
 build:
     project: Duplicati.sln
     verbosity: normal
+build_script:
+    - ps: |
+        Install-Module -Name Invoke-MsBuild -Force
+        Invoke-MsBuild -Path  .\Duplicati.sln -PassThru
 test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
