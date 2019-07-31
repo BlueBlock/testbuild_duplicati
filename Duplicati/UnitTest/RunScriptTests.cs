@@ -49,7 +49,7 @@ namespace Duplicati.UnitTest
             var PAUSE_TIME = TimeSpan.FromSeconds(3);
 
             BorderTests.WriteTestFilesToFolder(DATAFOLDER, blocksize, 0);
-
+            Console.WriteLine($"TARGETFOLDER: {TARGETFOLDER}");
             using (var c = new Library.Main.Controller("file://" + TARGETFOLDER, options, null))
             {
                 var res = c.Backup(new string[] { DATAFOLDER });
