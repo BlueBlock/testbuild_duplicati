@@ -23,8 +23,8 @@ test_script:
         Write-Host "CURRENT_LOCATION"
         Get-Location
 
-        Get-ChildItem "C:\projects\testbuild_duplicati"
-        Get-ChildItem "C:\projects\testbuild_duplicati\testdata"
+        Get-ChildItem "C:\projects\testbuild-duplicati"
+        Get-ChildItem "C:\projects\testbuild-duplicati\testdata"
         mkdir .\testData\data
 
         nuget install OpenCover -Version 4.7.922 -OutputDirectory packages
