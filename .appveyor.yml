@@ -8,6 +8,8 @@ environment:
     COVERALLS_REPO_TOKEN:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
 before_build:
+    - cmd: echo APPVEYOR_REPO_NAME
+    - cmd: echo $APPVEYOR_REPO_NAME
     - cmd: nuget restore Duplicati.sln
 build:
     project: Duplicati.sln
@@ -16,16 +18,10 @@ test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
 
-        #mkdir .\..\duplicati\testdata
-        #$extractPath = Resolve-Path ".\..\duplicati\testdata"
-        #write-host "path $extractPath"
-        #Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
-
         7z x DSMCBE.zip -otestdata
-
-        Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
-        Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
-
+        
+        Get-ChildItem "C:\projects\testbuild_duplicati"
+        Get-ChildItem "C:\projects\testbuild_duplicati\testdata"
         mkdir .\testData\data
 
         nuget install OpenCover -Version 4.7.922 -OutputDirectory packages
