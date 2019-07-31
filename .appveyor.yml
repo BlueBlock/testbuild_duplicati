@@ -18,6 +18,7 @@ test_script:
 
         mkdir .\..\duplicati\testdata
         $extractPath = Resolve-Path ".\..\duplicati\testdata"
+        write-host "path $extractPath"
         Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
 
         Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
