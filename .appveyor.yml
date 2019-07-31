@@ -20,6 +20,9 @@ test_script:
 
         7z x DSMCBE.zip -otestdata
         
+        Write-Host "CURRENT_LOCATION"
+        Get-Location
+
         Get-ChildItem "C:\projects\testbuild_duplicati"
         Get-ChildItem "C:\projects\testbuild_duplicati\testdata"
         mkdir .\testData\data
