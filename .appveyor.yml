@@ -11,7 +11,7 @@ before_build:
     - cmd: nuget restore Duplicati.sln
 build:
     project: Duplicati.sln
-    verbosity: minimal
+    verbosity: normal
 test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
@@ -71,7 +71,7 @@ test_script:
         }
 notifications:
     - provider: Webhook
-      url: https://webhooks.gitter.im/e/a2c55bac2b5c38838e0f
+      url: https://webhooks.gitter.imSTOP/e/a2c55bac2b5c38838e0f
       method: POST
       on_build_success: true
       on_build_failure: true
