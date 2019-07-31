@@ -5,10 +5,11 @@ platform: Any CPU
 environment:
     A_TEST: $Env:APPVEYOR_REPO_NAME . "here"
     AUTOUPDATER_Duplicati_SKIP_UPDATE: 1
-    UNITTEST_BASEFOLDER: C:\projects\duplicati\testdata
+    UNITTEST_BASEFOLDER2: C:\projects\duplicati\testdata
     COVERALLS_REPO_TOKEN:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
 before_build:
+    - ps: $env:UNITTEST_BASEFOLDER = "$Env:APPVEYOR_BUILD_FOLDER" + "\testdata"
     - ps: Write-Host "A_TEST $Env:A_TEST"
     - ps: Write-Host "APPVEYOR_REPO_NAME $Env:APPVEYOR_REPO_NAME"
     - ps: Write-Host "APPVEYOR_BUILD_FOLDER $Env:APPVEYOR_BUILD_FOLDER"
