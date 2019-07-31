@@ -3,17 +3,15 @@ image: Visual Studio 2017
 configuration: Debug
 platform: Any CPU
 environment:
-    A_TEST: $Env:APPVEYOR_REPO_NAME . "here"
     AUTOUPDATER_Duplicati_SKIP_UPDATE: 1
-    UNITTEST_BASEFOLDER2: C:\projects\duplicati\testdata
     COVERALLS_REPO_TOKEN:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
 before_build:
     - ps: $env:UNITTEST_BASEFOLDER = "$Env:APPVEYOR_BUILD_FOLDER" + "\testdata"
-    - ps: Write-Host "UNITTEST_BASEFOLDER $Env:UNITTEST_BASEFOLDER"
-    - ps: Write-Host "A_TEST $Env:A_TEST"
-    - ps: Write-Host "APPVEYOR_REPO_NAME $Env:APPVEYOR_REPO_NAME"
-    - ps: Write-Host "APPVEYOR_BUILD_FOLDER $Env:APPVEYOR_BUILD_FOLDER"
+    - ps: if ($env:APPVEYOR_REPO_NAME.Equals("duplicati/duplicati")) {
+        $env:GITTER_NOTIFY_URL = "https://webhooks.gitter.imSTOP/e/a2c55bac2b5c38838e0f"
+        }
+    - ps: Write-Host "GITTER_NOTIFY_URL $env:GITTER_NOTIFY_URL"
     - cmd: nuget restore Duplicati.sln
 build:
     project: Duplicati.sln
@@ -23,12 +21,6 @@ test_script:
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
 
         7z x DSMCBE.zip -otestdata
-        
-        Write-Host "CURRENT_LOCATION"
-        Get-Location
-
-        Get-ChildItem "C:\projects\testbuild-duplicati"
-        Get-ChildItem "C:\projects\testbuild-duplicati\testdata"
         mkdir .\testData\data
 
         nuget install OpenCover -Version 4.7.922 -OutputDirectory packages
@@ -83,7 +75,7 @@ test_script:
         }
 notifications:
     - provider: Webhook
-      url: https://webhooks.gitter.imSTOP/e/a2c55bac2b5c38838e0f
+      url: $Env:GITTER_NOTIFY_URL
       method: POST
       on_build_success: true
       on_build_failure: true
