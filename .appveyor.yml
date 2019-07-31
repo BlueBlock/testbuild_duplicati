@@ -16,12 +16,14 @@ build:
     verbosity: minimal
 before_test:
     - ps: |
+        Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
+        Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
         Get-Content .\Duplicati\CommandLine\app.config
 test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
 
-        7z x DSMCBE.zip -otestdata -y
+        7z x DSMCBE.zip -o..\duplicati\testdata -y
         mkdir .\testData\data
 
         nuget install OpenCover -Version 4.7.922 -OutputDirectory packages
@@ -33,12 +35,6 @@ test_script:
         $testsPassed = $true
 
         foreach ($elem in $tests) {
-
-            Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
-            Get-ChildItem 
-
-            7z x DSMCBE.zip -otestdata -y
-
             $testResultsFile = "$elem" + ".xml"
 
             .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe `
