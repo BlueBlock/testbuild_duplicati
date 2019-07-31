@@ -20,7 +20,6 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Uri = Duplicati.Library.Utility.Uri;
 
 namespace Duplicati.UnitTest
 {
@@ -80,21 +79,13 @@ namespace Duplicati.UnitTest
         [Category("SVNData")]
         public void TestWithErrors()
         {
-            try
-            {
-                var u = new Uri(TestUtils.GetDefaultTarget());
-                Console.WriteLine($"GetDefaultTarget: {u}");
-                RandomErrorBackend.WrappedBackend = u.Scheme;
-                var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
+            var u = new Library.Utility.Uri(TestUtils.GetDefaultTarget());
+            RandomErrorBackend.WrappedBackend = u.Scheme;
+            var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
 
-                SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("HERE");
-                Console.WriteLine(ex);
-                throw;
-            }
+            Console.WriteLine($"TestFolders: {TestFolders.Take(5).ToArray()}");
+            Console.WriteLine($"target: {target}");
+            SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
         }
 
         [Test]
