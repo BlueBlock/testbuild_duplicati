@@ -83,6 +83,7 @@ namespace Duplicati.UnitTest
             try
             {
                 var u = new Uri(TestUtils.GetDefaultTarget());
+                Console.WriteLine($"GetDefaultTarget: {u}");
                 RandomErrorBackend.WrappedBackend = u.Scheme;
                 var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
 
