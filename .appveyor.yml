@@ -33,6 +33,8 @@ test_script:
         $testsPassed = $true
 
         foreach ($elem in $tests) {
+            7z x DSMCBE.zip -otestdata
+            
             $testResultsFile = "$elem" + ".xml"
 
             .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe `
