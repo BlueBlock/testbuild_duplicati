@@ -10,6 +10,7 @@ environment:
         secure: szQsrkP5rvra8L60SomD73/dFvRwot0UuyA566zqzI2qmLOr+MhLN0AyC8BTbhYY
 before_build:
     - ps: $env:UNITTEST_BASEFOLDER = "$Env:APPVEYOR_BUILD_FOLDER" + "\testdata"
+    - ps: Write-Host "UNITTEST_BASEFOLDER $Env:UNITTEST_BASEFOLDER"
     - ps: Write-Host "A_TEST $Env:A_TEST"
     - ps: Write-Host "APPVEYOR_REPO_NAME $Env:APPVEYOR_REPO_NAME"
     - ps: Write-Host "APPVEYOR_BUILD_FOLDER $Env:APPVEYOR_BUILD_FOLDER"
