@@ -21,13 +21,11 @@ before_test:
         Get-Content .\Duplicati\CommandLine\app.config
 test_script:
     - ps: |
-        Install-Module -Name 7Zip4Powershell
-
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
-        Expand-7Zip -ArchiveFileName DSMCBE.zip -TargetPath .\..\duplicati\testdata
 
+        $extractPath = Resolve-Path ".\..\duplicati\testdata"
+        Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
 
-        #7z x DSMCBE.zip -o..\duplicati\testdata -y
         mkdir .\testData\data
 
         nuget install OpenCover -Version 4.7.922 -OutputDirectory packages
