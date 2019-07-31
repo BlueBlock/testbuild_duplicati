@@ -16,15 +16,17 @@ build:
     verbosity: minimal
 before_test:
     - ps: |
-        Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
-        Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
         Get-Content .\Duplicati\CommandLine\app.config
 test_script:
     - ps: |
         Start-FileDownload https://s3.amazonaws.com/duplicati-test-file-hosting/DSMCBE.zip
 
         $extractPath = Resolve-Path ".\..\duplicati\testdata"
+        mkdir $extractPath
         Start-Process -FilePath 7z.exe -Args "-o$extractPath" -Wait
+
+        Get-ChildItem C:\projects\duplicati\testdata\DSMCBE
+        Get-ChildItem C:\projects\testbuild-duplicati\testdata\DSMCBE
 
         mkdir .\testData\data
 
