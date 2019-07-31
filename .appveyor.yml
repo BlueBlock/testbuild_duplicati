@@ -3,6 +3,7 @@ image: Visual Studio 2017
 configuration: Debug
 platform: Any CPU
 environment:
+    A_TEST: "Testing " + "here"
     AUTOUPDATER_Duplicati_SKIP_UPDATE: 1
     UNITTEST_BASEFOLDER: C:\projects\duplicati\testdata
     COVERALLS_REPO_TOKEN:
