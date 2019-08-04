@@ -101,7 +101,7 @@
       <Name>Duplicati.Library.DynamicLoader</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Library\Interface\Duplicati.Library.Interface.csproj">
-      <Project>{C5899F45-B0FF-483C-9D38-24A9FCAAB237}</Project>
+      <Project>{c5899f45-b0ff-483c-9d38-24a9fcaab237}</Project>
       <Name>Duplicati.Library.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Library\Utility\Duplicati.Library.Utility.csproj">
