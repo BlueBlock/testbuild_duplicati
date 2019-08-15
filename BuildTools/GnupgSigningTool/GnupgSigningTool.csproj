@@ -7,8 +7,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GnupgSigningTool</RootNamespace>
     <AssemblyName>GnupgSigningTool</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,19 +26,12 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Duplicati\Library\Encryption\Duplicati.Library.Encryption.csproj">
-      <Project>{2cf2d90e-c25b-47ad-91e0-98451bab8058}</Project>
+      <Project>{94484FDB-2EFA-4CF0-9BE6-A561157B4F87}</Project>
       <Name>Duplicati.Library.Encryption</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Duplicati\Library\Utility\Duplicati.Library.Utility.csproj">
@@ -53,9 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
