@@ -1,7 +1,8 @@
+sudo: required
 dist: bionic
 language: csharp
 solution: Duplicati.sln
-dotnet: 2.0.0
+#dotnet: 2.0.0
 install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
@@ -13,7 +14,11 @@ addons:
     project:
       name: "duplicati/duplicati"
       description: "Duplicati Build submitted via Travis CI"
-    notification_email: kenneth@duplicati.com
+  snaps:
+    - name: dotnet-sdk
+      classic: true
+      channel: latest/beta      
+    notification_email: Xkenneth@duplicati.com
     build_command_prepend: "msbuild /t:Clean"
     build_command:   "msbuild /t:Rebuild"
     branch_pattern: coverity_scan
@@ -68,8 +73,9 @@ jobs:
           username: $SAUCE_USERNAME
           access_key: $SAUCE_ACCESS_KEY
 
+before_script:
+  - sudo snap alias dotnet-sdk.dotnet dotnet          
 before_install:
-      - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
-
+  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 script:
   - ./build.sh ${CATEGORY} ${TRAVIS_BUILD_DIR}
