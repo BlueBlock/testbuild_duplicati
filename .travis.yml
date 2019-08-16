@@ -1,7 +1,12 @@
 dist: bionic
 language: csharp
 solution: Duplicati.sln
-dotnet: 2.0.0
+#dotnet: 2.0.0
+matrix:
+  include:
+    - dotnet: 2.1.502
+      mono: none
+    - mono: latest
 install:
   ##- sudo add-apt-repository -y ppa:deadsnakes/ppa
   - sudo apt-get clean
