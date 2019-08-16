@@ -3,13 +3,14 @@ language: csharp
 solution: Duplicati.sln
 dotnet: 2.0.0
 install:
-  - sudo python3.6 -V
   - sudo add-apt-repository ppa:deadsnakes/ppa
   - sudo apt update
   - sudo apt install software-properties-common
   - sudo apt install python3.7
-  - sudo python3.6 -V
   - sudo python3.7 -V
+  - command python --version
+  - alias python=python3
+  - command python --version
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
   - sudo -H pip install --upgrade pip
