@@ -1,12 +1,17 @@
 dist: bionic
 language: csharp
 solution: Duplicati.sln
-dotnet: 2.0.0
+#dotnet: 2.0.0
+matrix:
+  include:
+    - dotnet: 2.1.502
+      mono: none
+    - mono: latest
 install:
   - sudo add-apt-repository ppa:deadsnakes/ppa
   - sudo apt update
-  - sudo apt install software-properties-common -y
-  - sudo apt install python3.7 -y
+  - sudo apt -y install software-properties-common
+  - sudo apt -y install python3.7
   - sudo python3.7 -V
   - command python --version
   - alias python=python3
