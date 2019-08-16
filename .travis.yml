@@ -4,7 +4,7 @@ language: csharp
 solution: Duplicati.sln
 mono: none
 dotnet: 2.0.0
-install: 
+install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
   - sudo pip install selenium
