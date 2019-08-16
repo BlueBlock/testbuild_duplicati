@@ -3,21 +3,21 @@ language: csharp
 solution: Duplicati.sln
 dotnet: 2.0.0
 install:
-  - sudo add-apt-repository -y ppa:deadsnakes/ppa
+  #- sudo add-apt-repository -y ppa:deadsnakes/ppa
   - sudo apt-get clean
   - sudo apt-get update
-  #- sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-  - sudo apt-get -y install software-properties-common
-  - sudo apt-get -y install python3.7
-  - sudo python3.7 -V
+  ##- sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+  #- sudo apt-get -y install software-properties-common
+  #- sudo apt-get -y install python3.7
+  #- sudo python3.7 -V
   - command python --version
   - sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
   - command python --version
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
-  - sudo -H pip install --upgrade pip
-  - sudo pip install selenium
-  - sudo pip install --upgrade urllib3
+  - sudo -H pip install --upgrade pip3
+  - sudo pip3 install selenium
+  - sudo pip3 install --upgrade urllib3
   - if [ ! -d "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.18.2 ]; then ln -s "${TRAVIS_BUILD_DIR}"/packages/sharpcompress.0.18.2 "${TRAVIS_BUILD_DIR}"/packages/SharpCompress.0.18.2; fi
 addons:
   coverity_scan:
