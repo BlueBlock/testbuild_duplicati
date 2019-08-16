@@ -12,7 +12,6 @@ install:
   #- sudo python3.7 -V
   - command python --version
   - alias python=python3
-  - sudo alias python=python3
   - sudo update-alternatives --config python
   - command python --version
   - sudo command python --version
