@@ -2,7 +2,8 @@ sudo: required
 dist: bionic
 language: csharp
 solution: Duplicati.sln
-#dotnet: 2.0.0 
+mono: none
+dotnet: 2.0.0
 install:
   - nuget restore Duplicati.sln
   - nuget install NUnit.Runners -Version 3.5.0 -OutputDirectory testrunner
