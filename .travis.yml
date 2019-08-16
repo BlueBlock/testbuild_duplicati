@@ -5,8 +5,8 @@ dotnet: 2.0.0
 install:
   - sudo add-apt-repository ppa:deadsnakes/ppa
   - sudo apt update
-  - sudo apt install software-properties-common
-  - sudo apt install python3.7
+  - sudo apt install software-properties-common -y
+  - sudo apt install python3.7 -y
   - sudo python3.7 -V
   - command python --version
   - alias python=python3
