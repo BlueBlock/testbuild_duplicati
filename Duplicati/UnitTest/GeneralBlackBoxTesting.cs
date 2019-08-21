@@ -83,6 +83,8 @@ namespace Duplicati.UnitTest
             RandomErrorBackend.WrappedBackend = u.Scheme;
             var target = u.SetScheme(new RandomErrorBackend().ProtocolKey).ToString();
 
+            Console.WriteLine(TestFolders.ToArray());
+
             SVNCheckoutTest.RunTest(TestFolders.Take(5).ToArray(), TestOptions, target);
         }
 
