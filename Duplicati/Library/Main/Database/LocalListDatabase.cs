@@ -399,6 +399,7 @@ namespace Duplicati.Library.Main.Database
                     var dict = new Dictionary<long, long>();
                     for (var i = 0; i < m_filesets.Length; i++)
                     {
+                        Console.WriteLine($"i:{i}");
                         dict[m_filesets[i].Key] = i;
                     }
                     
@@ -414,6 +415,7 @@ namespace Duplicati.Library.Main.Database
                             while (rd.Read())
                             {
                                 var id = rd.GetInt64(0);
+                                Console.WriteLine($"id:{id}");
                                 var isFullBackup = rd.GetInt32(1);
                                 var e = dict[id];
 
