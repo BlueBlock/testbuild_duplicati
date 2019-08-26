@@ -1,0 +1,62 @@
+# when developing and you really want to clean everything up
+# run git clean -fdx
+# thx @spider-mario
+
+# compilation output
+par2
+libpar2.a
+*.o
+.deps/
+par2.exe
+tests/*.exe
+
+# test output
+*.trs
+*.log
+tests/runtest*
+
+# unit test binaries
+tests/*_test
+tests/.dirstamp
+
+# autotools output
+aclocal.m4
+autom4te.cache/
+compile
+test-driver
+Makefile.in
+Makefile
+config.h
+config.status
+configure
+stamp-h
+stamp-h1
+src/.dirstamp
+install-sh
+missing
+ar-lib
+
+# windows
+Release/
+Debug/
+*.old
+par2cmdline.vcxproj.user
+par2cmdline.suo
+.vs/
+
+test.*
+# Linux perf record output
+perf.*
+# gcc -fprofile-use
+*.gcda
+
+# eclipse stuff you get when you point it at a Makefile project
+.cproject
+.project
+.settings
+
+# emacs files
+*~
+.#*
+\#*#
+.~lock.*#
