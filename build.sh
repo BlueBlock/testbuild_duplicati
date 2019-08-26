@@ -24,6 +24,12 @@ fi
 
 echo "Build script starting with parameters TRAVIS_BUILD_DIR=$TRAVIS_BUILD_DIR and CATEGORY=$CATEGORY"
 
+# build par2cmdline
+
+echo "travis_fold:start:build_par2cmdline"
+msbuild /p:Configuration=Release par2cmdline/par2cmdline.sln
+echo "travis_fold:end:build_par2cmdlinetim"
+
 # build duplicati
 
 list_dir "${TRAVIS_BUILD_DIR}"/packages/
