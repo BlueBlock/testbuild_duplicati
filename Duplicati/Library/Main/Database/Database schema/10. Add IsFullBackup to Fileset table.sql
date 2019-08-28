@@ -1,4 +1,4 @@
-﻿CREATE TABLE "Fileset_Temp" (
+﻿CREATE TABLE Fileset_Temp (
 	"ID" INTEGER PRIMARY KEY,
 	"OperationID" INTEGER NOT NULL,
 	"VolumeID" INTEGER NOT NULL,
