@@ -139,8 +139,8 @@ namespace Duplicati.Library.Main.Volumes
             long volumeCountFromDatabase = options.BackendRemoteVolumeCount;
             long maxFilesPerFolder = options.BackendMaxFilesPerFolder;
             long numSubFoldersPerFolder = options.BackendMaxFoldersPerFolder;
-            string targetFolder = SubFolderFilePlacementUtils2.GetFileFolderPathPlacementUsingFlatStructure(volumeCountFromDatabase, maxFilesPerFolder, numSubFoldersPerFolder);
-            SubFolderFilePlacementUtils2.VolumeFileCount++;
+            string targetFolder = Duplicati.Library.Main.Volumes.SubFolderFilePlacementUtils2.GetFileFolderPathPlacementUsingFlatStructure(volumeCountFromDatabase, maxFilesPerFolder, numSubFoldersPerFolder);
+            Duplicati.Library.Main.Volumes.SubFolderFilePlacementUtils2.VolumeFileCount++;
             return targetFolder;
         }
 
