@@ -33,10 +33,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="NGettext">
-      <HintPath>..\..\..\packages\NGettext.0.6.3\lib\net45\NGettext.dll</HintPath>
+    <Reference Include="NGettext, Version=0.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NGettext.0.6.4\lib\net45\NGettext.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
@@ -48,12 +48,11 @@
     <Compile Include="MoLocalizationService.cs" />
     <Compile Include="LocalizationContext.cs" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>    
-    <EmbeddedResource Include="..\..\..\Localizations\duplicati\*.mo" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\Localizations\duplicati\*.mo" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
