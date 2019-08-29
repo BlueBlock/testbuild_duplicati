@@ -1,0 +1,7 @@
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\bin\Debug\Duplicati.Library.Logging.dll.config
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\bin\Debug\Duplicati.Library.Logging.dll
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\bin\Debug\Duplicati.Library.Logging.pdb
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\obj\Debug\Duplicati.Library.Logging.csprojAssemblyReference.cache
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\obj\Debug\Duplicati.Library.Logging.csproj.CoreCompileInputs.cache
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\obj\Debug\Duplicati.Library.Logging.dll
+C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Logging\obj\Debug\Duplicati.Library.Logging.pdb
