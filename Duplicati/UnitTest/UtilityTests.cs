@@ -107,12 +107,15 @@ namespace Duplicati.UnitTest
                 Task task = TestUtils.GrowingFile(growingFilename, tokenSource.Token);
                 using (FileStream growingStream = SystemIO.IO_OS.FileOpenRead(growingFilename))
                 {
-                    Thread.Sleep(500);
+                    while (growingStream.Length == 0) { Thread.SpinWait(10); }
+                    //Thread.Sleep(500);
                     fixedGrowingStreamLength = growingStream.Length;
-                    Thread.Sleep(500);
+                    while (growingStream.Length == 0) { Thread.SpinWait(10); }
+                    //Thread.Sleep(2000);
                     using (var limitStream = new ReadLimitLengthStream(growingStream, fixedGrowingStreamLength))
                     {
-                        Thread.Sleep(500);
+                        while (growingStream.Length == 0) { Thread.SpinWait(10); }
+                        //Thread.Sleep(2000);
                         nextGrowingStreamLength = growingStream.Length;
                         limitStreamLength = limitStream.Length;
                     }
@@ -120,11 +123,8 @@ namespace Duplicati.UnitTest
             }
             Console.WriteLine($"fixedGrowingStreamLength:{fixedGrowingStreamLength} limitStreamLength:{limitStreamLength} nextGrowingStreamLength:{nextGrowingStreamLength}");
             Assert.IsTrue(fixedGrowingStreamLength > 0);
-            Console.WriteLine("fixedGrowingStreamLength is greater than 0: OK");
             Assert.AreEqual(fixedGrowingStreamLength, limitStreamLength);
-            Console.WriteLine("fixedGrowingStreamLength and limitStreamLength are equal: OK");
             Assert.IsTrue(limitStreamLength < nextGrowingStreamLength);
-            Console.WriteLine("limitStreamLength is less than fixedGrowingStreamLength: OK");
         }
 
         [Test]
