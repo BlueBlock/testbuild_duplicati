@@ -1,0 +1,9 @@
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\bin\Debug\Duplicati.Library.Localization.dll
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\bin\Debug\Duplicati.Library.Localization.pdb
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\bin\Debug\NGettext.dll
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\bin\Debug\NGettext.xml
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\obj\Debug\Duplicati.Library.Localization.csprojAssemblyReference.cache
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\obj\Debug\Duplicati.Library.Localization.csproj.CoreCompileInputs.cache
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\obj\Debug\Duplicati.Library.Localization.csproj.CopyComplete
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\obj\Debug\Duplicati.Library.Localization.dll
+C:\Users\dbullock\Documents\GitHub\testbuild_duplicati\Duplicati\Library\Localization\obj\Debug\Duplicati.Library.Localization.pdb

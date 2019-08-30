@@ -39,7 +39,12 @@ namespace Duplicati.Library.UsageReporter
         /// <summary>
         /// The target upload url
         /// </summary>
-        private const string UPLOAD_URL = "https://usage-reporter.duplicati.com/api/v1/report";
+#if DEBUG
+        private const string UPLOAD_URL = "https://usage-reporter-dev.appspot.com/api/v1/report";
+#else
+        private const string UPLOAD_URL = "https://usage-reporter-dev.appspot.com/api/v1/report";
+        //private const string UPLOAD_URL = "https://usage-reporter.duplicati.com/api/v1/report";
+#endif
 
         /// <summary>
         /// Runs the upload process
@@ -65,6 +70,10 @@ namespace Duplicati.Library.UsageReporter
                         {
                             if (File.Exists(f))
                             {
+#if DEBUG
+                                File.AppendAllLines(@"usage-report.log", new[] {File.ReadAllText(f)});
+                                //Console.WriteLine(File.ReadAllText(f));
+#endif
                                 var req = (HttpWebRequest)WebRequest.Create(UPLOAD_URL);
                                 req.Method = "POST";
                                 req.ContentType = "application/json; charset=utf-8";
@@ -93,6 +102,7 @@ namespace Duplicati.Library.UsageReporter
                         }
                         catch (Exception ex)
                         {
+                            Console.WriteLine(ex);
                             Logging.Log.WriteErrorMessage(LOGTAG, "UploadFailed", ex, "UsageReporter failed");
                         }
                     }

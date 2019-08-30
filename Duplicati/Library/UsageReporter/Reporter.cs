@@ -85,9 +85,10 @@ namespace Duplicati.Library.UsageReporter
         {
             if (_eventChannel == null || _eventChannel.IsRetiredAsync.Result)
             {
+#if !DEBUG
                 if (IsDisabled)
                     return;
-
+#endif
                 var rsu = ReportSetUploader.Run();
                 var ep = EventProcessor.Run(rsu.Item2);
                 _eventChannel = ep.Item2;
@@ -157,6 +158,7 @@ namespace Duplicati.Library.UsageReporter
         {
             get
             {
+                return MaxReportLevel.ToString();
                 return IsDisabledByEnvironment ? "Disabled" : MaxReportLevel.ToString();
             }
         }
@@ -208,11 +210,11 @@ namespace Duplicati.Library.UsageReporter
             get
             {
                 var str = Environment.GetEnvironmentVariable(string.Format(DISABLED_ENVNAME_TEMPLATE, AutoUpdater.AutoUpdateSettings.AppName));
-#if DEBUG
+
                 // Default to not report crashes etc from debug builds
-                if (string.IsNullOrWhiteSpace(str))
-                    str = "none";
-#endif
+                //if (string.IsNullOrWhiteSpace(str))
+                //    str = "none";
+
                 return string.Equals(str, "none", StringComparison.OrdinalIgnoreCase) || Utility.Utility.ParseBool(str, false);
             }
         }
