@@ -105,10 +105,12 @@ namespace Duplicati.UnitTest
             using (CancellationTokenSource tokenSource = new CancellationTokenSource())
             {
                 Task task = TestUtils.GrowingFile(growingFilename, tokenSource.Token);
+                Task.Delay(3000, tokenSource.Token);
+                Thread.SpinWait(500);
                 using (FileStream growingStream = SystemIO.IO_OS.FileOpenRead(growingFilename))
                 {
                     Task.Delay(1000, tokenSource.Token);
-                    //Thread.Sleep(500);
+                    Thread.Sleep(500);
                     fixedGrowingStreamLength = growingStream.Length;
                     //while (growingStream.Length == 0) { Thread.SpinWait(10); }
                     Task.Delay(1000, tokenSource.Token);
