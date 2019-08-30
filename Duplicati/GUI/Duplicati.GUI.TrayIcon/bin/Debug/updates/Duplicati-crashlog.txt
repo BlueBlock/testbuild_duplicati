@@ -1,9 +1,0 @@
-System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.IO.IOException: The process cannot access the file 'C:\Users\dbullock\Source\Repos\duplicati\Duplicati\GUI\Duplicati.GUI.TrayIcon\bin\Debug\Duplicati.debug.log' because it is being used by another process.
-   at Duplicati.GUI.TrayIcon.HostedInstanceKeeper..ctor(String[] args) in C:\Users\dbullock\Source\Repos\duplicati\Duplicati\GUI\Duplicati.GUI.TrayIcon\HostedInstanceKeeper.cs:line 57
-   at Duplicati.GUI.TrayIcon.Program.RealMain(String[] _args) in C:\Users\dbullock\Source\Repos\duplicati\Duplicati\GUI\Duplicati.GUI.TrayIcon\Program.cs:line 152
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at Duplicati.Library.AutoUpdater.UpdaterManager.RunMethod(MethodInfo method, String[] args) in C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\AutoUpdater\UpdaterManager.cs:line 999

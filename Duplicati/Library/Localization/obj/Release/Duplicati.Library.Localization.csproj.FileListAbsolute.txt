@@ -1,9 +1,0 @@
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\bin\Release\Duplicati.Library.Localization.dll
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\bin\Release\Duplicati.Library.Localization.pdb
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\bin\Release\NGettext.dll
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\bin\Release\NGettext.xml
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\obj\Release\Duplicati.Library.Localization.csprojAssemblyReference.cache
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\obj\Release\Duplicati.Library.Localization.csproj.CoreCompileInputs.cache
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\obj\Release\Duplicati.Library.Localization.csproj.CopyComplete
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\obj\Release\Duplicati.Library.Localization.dll
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Localization\obj\Release\Duplicati.Library.Localization.pdb

@@ -1,9 +1,0 @@
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\bin\Debug\netstandard2.0\Duplicati.Library.Parity.deps.json
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\bin\Debug\netstandard2.0\Duplicati.Library.Parity.dll
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\bin\Debug\netstandard2.0\Duplicati.Library.Parity.pdb
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.csproj.CoreCompileInputs.cache
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.AssemblyInfoInputs.cache
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.AssemblyInfo.cs
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.dll
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.pdb
-C:\Users\dbullock\Source\Repos\duplicati\Duplicati\Library\Parity\obj\Debug\netstandard2.0\Duplicati.Library.Parity.csprojAssemblyReference.cache
