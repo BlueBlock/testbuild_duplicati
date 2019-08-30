@@ -118,9 +118,13 @@ namespace Duplicati.UnitTest
                     }
                 }
             }
+            Console.WriteLine($"fixedGrowingStreamLength:{fixedGrowingStreamLength} limitStreamLength:{limitStreamLength} nextGrowingStreamLength:{nextGrowingStreamLength}");
             Assert.IsTrue(fixedGrowingStreamLength > 0);
+            Console.WriteLine("fixedGrowingStreamLength is greater than 0: OK");
             Assert.AreEqual(fixedGrowingStreamLength, limitStreamLength);
+            Console.WriteLine("fixedGrowingStreamLength and limitStreamLength are equal: OK");
             Assert.IsTrue(limitStreamLength < nextGrowingStreamLength);
+            Console.WriteLine("limitStreamLength is less than fixedGrowingStreamLength: OK");
         }
 
         [Test]
