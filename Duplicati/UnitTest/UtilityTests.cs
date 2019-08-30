@@ -107,17 +107,19 @@ namespace Duplicati.UnitTest
                 Task task = TestUtils.GrowingFile(growingFilename, tokenSource.Token);
                 using (FileStream growingStream = SystemIO.IO_OS.FileOpenRead(growingFilename))
                 {
-                    Thread.SpinWait(100);
+                    Task.Delay(1000, tokenSource.Token);
                     //Thread.Sleep(500);
                     fixedGrowingStreamLength = growingStream.Length;
                     //while (growingStream.Length == 0) { Thread.SpinWait(10); }
-                    Thread.SpinWait(100);
-                    //Thread.Sleep(2000);
+                    Task.Delay(1000, tokenSource.Token);
+                    //Thread.SpinWait(100);
+                    Thread.Sleep(2000);
                     using (var limitStream = new ReadLimitLengthStream(growingStream, fixedGrowingStreamLength))
                     {
-                        Thread.SpinWait(100);
+                        Task.Delay(1000, tokenSource.Token);
+                        //Thread.SpinWait(100);
                         //while (growingStream.Length == 0) { Thread.SpinWait(10); }
-                        //Thread.Sleep(2000);
+                        Thread.Sleep(2000);
                         nextGrowingStreamLength = growingStream.Length;
                         limitStreamLength = limitStream.Length;
                     }
