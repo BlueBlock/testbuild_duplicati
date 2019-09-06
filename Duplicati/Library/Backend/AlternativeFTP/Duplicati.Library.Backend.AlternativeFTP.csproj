@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    <OutputType>Library</OutputType>    
+    <Copyright>LGPL, Copyright © Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Backend.AlternativeFTP</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>An alternative FTP backend for Duplicati</Description>
+    <PackageId>AlternativeFTP</PackageId>
+    <AssemblyName>Duplicati.Backend.AlternativeFTP</AssemblyName>
+    <RootNamespace>Duplicati.Backend.AlternativeFTP</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentFTP" Version="27.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\..\Localization\Duplicati.Library.Localization.csproj" />
+    <ProjectReference Include="..\..\Modules\Builtin\Duplicati.Library.Modules.Builtin.csproj" />
+    <ProjectReference Include="..\..\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

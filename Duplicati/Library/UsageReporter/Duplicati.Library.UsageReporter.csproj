@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright � Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Library.UsageReporter</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>Usage reporter for Duplicati</Description>
+    <PackageId>UsageReporter</PackageId>
+    <AssemblyName>Duplicati.Library.UsageReporter</AssemblyName>
+    <RootNamespace>Duplicati.Library.UsageReporter</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="CoCoL" Version="1.6.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\Duplicati.Library.AutoUpdater.csproj" />
+    <ProjectReference Include="..\Logging\Duplicati.Library.Logging.csproj" />
+    <ProjectReference Include="..\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright ? Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Server.Serialization</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>Serialization module for Duplicati</Description>
+    <PackageId>Serialization</PackageId>
+    <AssemblyName>Duplicati.Server.Serialization</AssemblyName>
+    <RootNamespace>Duplicati.Server.Serialization</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>	
+    <ProjectReference Include="..\..\Library\Interface\Duplicati.Library.Interface.csproj" />	
+    <ProjectReference Include="..\..\Library\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    <OutputType>Library</OutputType>
+    <Copyright>LGPL, Copyright © Duplicati Team 2019</Copyright>
+    <Product>Duplicati.Library.AutoUpdater</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>AutoUpdater library for Duplicati</Description>
+    <PackageId>AutoUpdater</PackageId>
+    <AssemblyName>Duplicati.Backend.AutoUpdater</AssemblyName>
+    <RootNamespace>Duplicati.Backend.AutoUpdater</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\License\Duplicati.License.csproj" />
+    <ProjectReference Include="..\Compression\Duplicati.Library.Compression.csproj" />
+    <ProjectReference Include="..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="AutoUpdateAppName.txt" />
+    <EmbeddedResource Include="AutoUpdateSignKey.txt" />
+    <EmbeddedResource Include="AutoUpdateURL.txt" />
+    <EmbeddedResource Include="AutoUpdateFolderReadme.txt" />
+    <EmbeddedResource Include="AutoUpdateInstallIDTemplate.txt" />
+    <EmbeddedResource Include="AutoUpdateBuildChannel.txt" />
+  </ItemGroup>
+
+</Project>

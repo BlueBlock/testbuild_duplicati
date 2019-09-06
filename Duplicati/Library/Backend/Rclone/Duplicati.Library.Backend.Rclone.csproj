@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright © Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Library.Backend.Rclone</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>Rclone backend for Duplicati</Description>
+    <PackageId>Rclone</PackageId>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\..\Localization\Duplicati.Library.Localization.csproj" />
+    <ProjectReference Include="..\..\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

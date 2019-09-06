@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    <Copyright>LGPL, Copyright © Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Library.Snapshots</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>A disk snapshot implementation for Duplicati</Description>
+    <PackageId>Snapshots</PackageId>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\Duplicati.Library.AutoUpdater.csproj" />
+    <ProjectReference Include="..\Common\Duplicati.Library.Common.csproj" />
+    <ProjectReference Include="..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\Localization\Duplicati.Library.Localization.csproj" />
+	<ProjectReference Include="..\Logging\Duplicati.Library.Logging.csproj" />
+    <ProjectReference Include="..\Utility\Duplicati.Library.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnixSupport">
+      <HintPath>..\..\..\thirdparty\UnixSupport\UnixSupport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="lvm-scripts\create-lvm-snapshot.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lvm-scripts\find-volume.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lvm-scripts\remove-lvm-snapshot.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+</Project>

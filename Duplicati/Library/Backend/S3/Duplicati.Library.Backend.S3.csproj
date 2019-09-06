@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright � Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Library.Backend.S3</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>S3 backend for Duplicati</Description>
+    <PackageId>S3</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.103.33" />
+    <PackageReference Include="AWSSDK.IdentityManagement" Version="3.3.103.22" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.104.21" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\..\Localization\Duplicati.Library.Localization.csproj" />
+    <ProjectReference Include="..\..\Utility\Duplicati.Library.Utility.csproj" />
+    <ProjectReference Include="..\..\Logging\Duplicati.Library.Logging.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright © Duplicati Team 2015</Copyright>
+    <Product>Duplicati.Library.Interface</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>The Duplicati library with all publicly exposed interfaces</Description>
+    <PackageId>Interface</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Localization\Duplicati.Library.Localization.csproj" />
+  </ItemGroup>
+
+</Project>

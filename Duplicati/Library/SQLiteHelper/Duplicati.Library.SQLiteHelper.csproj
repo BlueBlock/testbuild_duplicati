@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.0.0.7</Version>
+    
+    <Copyright>LGPL, Copyright ? Duplicati Team 2015</Copyright>
+    <Product>Duplicati.SQLiteHelper</Product>
+    <Company>Duplicati Team</Company>
+    <Authors>Duplicati Team</Authors>
+    <Description>SQLiteHelper for Duplicati</Description>
+    <PackageId>SQLiteHelper</PackageId>
+    <AssemblyName>Duplicati.SQLiteHelper</AssemblyName>
+    <RootNamespace>Duplicati.SQLiteHelper</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Content Include="..\..\..\thirdparty\SQLite\win64\System.Data.SQLite.dll">
+      <Link>SQLite\win64\System.Data.SQLite.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\thirdparty\SQLite\win32\System.Data.SQLite.dll">
+      <Link>SQLite\win32\System.Data.SQLite.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\thirdparty\SQLite\pinvoke\System.Data.SQLite.dll">
+      <Link>SQLite\pinvoke\System.Data.SQLite.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\thirdparty\SQLite\win32\SQLite.Interop.dll">
+      <Link>SQLite\win32\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\thirdparty\SQLite\win64\SQLite.Interop.dll">
+      <Link>SQLite\win64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Duplicati.Library.Logging.csproj" />
+    <ProjectReference Include="..\Interface\Duplicati.Library.Interface.csproj" />
+    <ProjectReference Include="..\Utility\Duplicati.Library.Utility.csproj" />
+    <ProjectReference Include="..\Localization\Duplicati.Library.Localization.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="UnixSupport">
+      <HintPath>..\..\..\thirdparty\UnixSupport\UnixSupport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
