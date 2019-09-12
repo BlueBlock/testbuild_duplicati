@@ -443,8 +443,10 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if '$(ConfigurationName)'=='Debug' &amp;&amp; '$(OS)'=='Windows_NT' copy /Y  '%25USERPROFILE%25\.nuget\packages\alphavss\1.4.0\build\net45\AlphaVSS.*.dll' '$(TargetDir)\alphavss\'
-if '$(ConfigurationName)'=='Debug' &amp;&amp; '$(OS)'=='Windows_NT' copy /Y  '%25USERPROFILE%25\.nuget\packages\alphavss\1.4.0\lib\net45\AlphaVSS.*.dll' '$(TargetDir)\alphavss\'
+  <PostBuildEvent Condition="'$(OS)'!='Windows_NT'">
+</PostBuildEvent>
+    <PostBuildEvent Condition="'$(OS)'=='Windows_NT'">if '$(ConfigurationName)'=='Debug' copy /Y  '%25USERPROFILE%25\.nuget\packages\alphavss\1.4.0\build\net45\AlphaVSS.*.dll' '$(TargetDir)\alphavss\'
+if '$(ConfigurationName)'=='Debug' '%25USERPROFILE%25\.nuget\packages\alphavss\1.4.0\lib\net45\AlphaVSS.*.dll' '$(TargetDir)\alphavss\'
 </PostBuildEvent>
   </PropertyGroup>
   <Import Project="..\..\..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\..\..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
