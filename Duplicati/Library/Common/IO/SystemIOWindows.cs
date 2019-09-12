@@ -129,68 +129,28 @@ namespace Duplicati.Library.Common.IO
 
         private System.Security.AccessControl.FileSystemSecurity GetAccessControlDir(string path)
         {
-            if (!IsPathTooLong(path))
-                try
-                {
-                    var di = new DirectoryInfo(path);
-                    return di.GetAccessControl();
-                }
-                catch (System.IO.PathTooLongException) { }
-                catch (System.ArgumentException) { }
-
-            //TODO-DNC Revert back to proper call when Library will be netstandard ready
-            return (System.Security.AccessControl.FileSystemSecurity)
-                typeof(Alphaleonis.Win32.Filesystem.Directory).GetMethod("GetAccessControl", new Type[] { typeof(string) })
-                    .Invoke(null, new object[] { PrefixWithUNC(path) });
+            return PathTooLongFuncWrapper(System.IO.Directory.GetAccessControl,
+                                          Alphaleonis.Win32.Filesystem.Directory.GetAccessControl, path, true);
         }
 
         private System.Security.AccessControl.FileSystemSecurity GetAccessControlFile(string path)
         {
-            if (!IsPathTooLong(path))
-                try
-                {
-                    var fi = new FileInfo(path);
-                    return fi.GetAccessControl();
-                }
-                catch (System.IO.PathTooLongException) { }
-                catch (System.ArgumentException) { }
-
-            //TODO-DNC Revert back to proper call when Library will be netstandard ready
-            return (System.Security.AccessControl.FileSystemSecurity)
-                typeof(Alphaleonis.Win32.Filesystem.File).GetMethod("GetAccessControl", new Type[] { typeof(string) })
-                    .Invoke(null, new object[] { PrefixWithUNC(path) });
+            return PathTooLongFuncWrapper(System.IO.File.GetAccessControl,
+                                          Alphaleonis.Win32.Filesystem.File.GetAccessControl, path, true);
         }
 
         private void SetAccessControlFile(string path, FileSecurity rules)
         {
-            if (!IsPathTooLong(path))
-                try
-                {
-                    new FileInfo(path).SetAccessControl(rules);
-                    return;
-                }
-                catch (System.IO.PathTooLongException) { }
-                catch (System.ArgumentException) { }
-
-            //TODO-DNC Revert back to proper call when Library will be netstandard ready
-            typeof(Alphaleonis.Win32.Filesystem.File).GetMethod("SetAccessControl", new Type[] { typeof(string), typeof(System.Security.AccessControl.FileSystemSecurity), typeof(AccessControlSections) })
-                .Invoke(null, new object[] { PrefixWithUNC(path), rules, AccessControlSections.All });
+            PathTooLongActionWrapper(p => System.IO.File.SetAccessControl(p, rules),
+                                     p => Alphaleonis.Win32.Filesystem.File.SetAccessControl(p, rules, AccessControlSections.All),
+                                     path, true);
         }
 
         private void SetAccessControlDir(string path, DirectorySecurity rules)
         {
-            if (!IsPathTooLong(path))
-                try
-                {
-                    new DirectoryInfo(path).SetAccessControl(rules);
-                    return;
-                }
-                catch (System.IO.PathTooLongException) { }
-                catch (System.ArgumentException) { }
-
-            //TODO-DNC Revert back to proper call when Library will be netstandard ready
-            typeof(Alphaleonis.Win32.Filesystem.Directory).GetMethod("SetAccessControl", new Type[] { typeof(string), typeof(System.Security.AccessControl.FileSystemSecurity), typeof(AccessControlSections) })
-                .Invoke(null, new object[] { PrefixWithUNC(path), rules, AccessControlSections.All });
+            PathTooLongActionWrapper(p => System.IO.Directory.SetAccessControl(p, rules),
+                                     p => Alphaleonis.Win32.Filesystem.Directory.SetAccessControl(p, rules, AccessControlSections.All),
+                                     path, true);
         }
 
         private static void PathTooLongVoidFuncWrapper<U, T>(Func<string, T> nativeIOFunc,

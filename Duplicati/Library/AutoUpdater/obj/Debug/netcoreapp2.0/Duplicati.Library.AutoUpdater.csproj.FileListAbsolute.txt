@@ -1,4 +1,0 @@
-C:\Users\dbullock\Documents\GitHub\duplicati_mnaiman\Duplicati\Library\AutoUpdater\obj\Debug\netcoreapp2.0\Duplicati.Library.AutoUpdater.csprojAssemblyReference.cache
-C:\Users\dbullock\Documents\GitHub\duplicati_mnaiman\Duplicati\Library\AutoUpdater\obj\Debug\netcoreapp2.0\Duplicati.Library.AutoUpdater.csproj.CoreCompileInputs.cache
-C:\Users\dbullock\Documents\GitHub\duplicati_mnaiman\Duplicati\Library\AutoUpdater\obj\Debug\netcoreapp2.0\Duplicati.Library.AutoUpdater.AssemblyInfoInputs.cache
-C:\Users\dbullock\Documents\GitHub\duplicati_mnaiman\Duplicati\Library\AutoUpdater\obj\Debug\netcoreapp2.0\Duplicati.Library.AutoUpdater.AssemblyInfo.cs

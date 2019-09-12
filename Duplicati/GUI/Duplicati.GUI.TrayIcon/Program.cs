@@ -318,7 +318,7 @@ namespace Duplicati.GUI.TrayIcon
         // attempt to load non-existing assemblies
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-        private static TrayIconBase GetWinformsInstance() { return new Win32Runner(); }
+        private static TrayIconBase GetWinformsInstance() { return new Windows.WinFormsRunner(); }
 #if __MonoCS__ || __WindowsGTK__ || ENABLE_GTK
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         private static TrayIconBase GetGtkInstance() { return new GtkRunner(); }
@@ -349,7 +349,7 @@ namespace Duplicati.GUI.TrayIcon
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         private static bool TryGetWinforms()
         {
-            return Platform.IsClientWindows;
+            return typeof(System.Windows.Forms.NotifyIcon) != null;
         }
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]

@@ -17,7 +17,6 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 // 
 #endregion
-using Duplicati.Logging.Duplicati.Library.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -444,7 +443,7 @@ namespace Duplicati.Library.Logging
             {
                 lock (m_lock)
                 {
-                    var cur = CallContext.GetData(LOGICAL_CONTEXT_KEY) as string;
+                    var cur = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData(LOGICAL_CONTEXT_KEY) as string;
                     if (cur == null || cur == m_root.InstanceID)
                         return m_root;
                     
@@ -462,11 +461,11 @@ namespace Duplicati.Library.Logging
                     if (value != null)
                     {
                         m_log_instances[value.InstanceID] = value;
-                        CallContext.SetData(LOGICAL_CONTEXT_KEY, value.InstanceID);
+                        System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(LOGICAL_CONTEXT_KEY, value.InstanceID);
                     }
                     else
                     {
-                        CallContext.SetData(LOGICAL_CONTEXT_KEY, null);
+                        System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(LOGICAL_CONTEXT_KEY, null);
                     }
                 }
             }
