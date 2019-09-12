@@ -1,0 +1,463 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\Dropbox\\Duplicati.Library.Backend.Dropbox.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\Dropbox\\Duplicati.Library.Backend.Dropbox.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\Dropbox\\Duplicati.Library.Backend.Dropbox.csproj",
+        "projectName": "Dropbox",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\Dropbox\\Duplicati.Library.Backend.Dropbox.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\Dropbox\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\Duplicati.Library.OAuthHelper.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\Duplicati.Library.OAuthHelper.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\Duplicati.Library.OAuthHelper.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\Duplicati.Library.OAuthHelper.csproj",
+        "projectName": "OAuthHelper",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\Duplicati.Library.OAuthHelper.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Backend\\OAuthHelper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\Duplicati.Library.Common.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\Duplicati.Library.Common.csproj",
+        "projectName": "Library.IO",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\Duplicati.Library.Common.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "AlphaFS": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "AlphaVSS": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.IO.FileSystem.AccessControl": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj",
+        "projectName": "Interface",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj",
+        "projectName": "Localization",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NGettext": {
+              "target": "Package",
+              "version": "[0.6.4, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj",
+        "projectName": "Logging",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\Duplicati.Library.Logging.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Logging\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj": {
+      "version": "2.0.0.7",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj",
+        "projectName": "Utility",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\Duplicati.Library.Utility.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\Duplicati.Library.Common.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Common\\Duplicati.Library.Common.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Interface\\Duplicati.Library.Interface.csproj"
+              },
+              "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj": {
+                "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\testbuild_duplicati\\Duplicati\\Library\\Localization\\Duplicati.Library.Localization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Win32.Registry": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Management": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

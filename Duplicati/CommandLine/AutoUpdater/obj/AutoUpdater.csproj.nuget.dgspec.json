@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dbullock\\Documents\\GitHub\\duplicati_mnaiman\\Duplicati\\CommandLine\\AutoUpdater\\AutoUpdater.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dbullock\\Documents\\GitHub\\duplicati_mnaiman\\Duplicati\\CommandLine\\AutoUpdater\\AutoUpdater.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dbullock\\Documents\\GitHub\\duplicati_mnaiman\\Duplicati\\CommandLine\\AutoUpdater\\AutoUpdater.csproj",
+        "projectName": "AutoUpdater",
+        "projectPath": "C:\\Users\\dbullock\\Documents\\GitHub\\duplicati_mnaiman\\Duplicati\\CommandLine\\AutoUpdater\\AutoUpdater.csproj",
+        "packagesPath": "C:\\Users\\dbullock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbullock\\Documents\\GitHub\\duplicati_mnaiman\\Duplicati\\CommandLine\\AutoUpdater\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dbullock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\dbullock\\Source\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
